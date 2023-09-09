@@ -1,0 +1,368 @@
+# Screen File
+Setting:
+  Imports: [ ]
+  EscClose: true
+  BlurRadius: 20.0
+  ScaleValue: 4.0
+  Actions:
+  Priority: 0
+  BackgroundColorSecond: "0,0,0"
+  CallEventToHud: false
+  CloseDied: false
+  BackgroundAlpha: "0.3F"
+  hide: false
+  HideHud: [ ]
+  RefreshRate: 1.0
+  Through: false
+  Cover: [ ]
+  MainGroup: "main"
+  AutoScaleHeightValue: 213.0
+  CurrentItemSize: "16"
+  IsHud: false
+  Code: |
+    静态 函数 异步发送消息(消息内容){
+        消息.发送聊天框信息(消息内容);
+        main.弹窗.Text = List[消息内容];
+        main.弹窗.Visible = 'true';
+        async{ 
+            var 弹窗存活时间 = 3;
+             while( 弹窗存活时间 > 0 ){
+             Thread.sleep(1000);
+             弹窗存活时间--;
+            }
+            main.弹窗.Visible = 'false';
+        }
+    }
+  Variables: [ ]
+  BlurValue: "0.1F"
+  ID: "DreamAuthMeLogin"
+  AutoScale: true
+  BackgroundColorFirst: "0,0,0"
+  AutoScaleWidthValue: 456.0
+Groups:
+  main:
+    Components:
+      背景:
+        Texts: [ ]
+        Lock: true
+        Type: "Image"
+        Actions:
+        SubAttribute:
+          hover:
+            Attribute:
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/background.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "0"
+              fontSize: "18.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "805.51"
+          Alpha: "1.0"
+          Visible: "true"
+          Y: "340.01"
+          Enable: "true"
+          Height: "165.0"
+          Width: "210.0"
+      登录:
+        Texts: [ ]
+        Lock: true
+        Type: "Image"
+        Actions:
+        SubAttribute:
+          hover:
+            Attribute:
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/logo_login.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "0"
+              fontSize: "18.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "882.21"
+          Alpha: "1.0"
+          Visible: "true"
+          Y: "369.21"
+          Height: "14.82"
+          Width: "57.94"
+      密码框:
+        Texts: [ ]
+        Lock: true
+        Type: "PasswordBox"
+        Actions:
+        SubAttribute:
+          Background:
+            Attribute:
+              round: "0"
+              color: "150,160,99"
+              OffsetX: "0.0"
+              Alpha: "0.3"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              fontSize: "18.0"
+              font: "none"
+        Tips:
+          - "请输入你的密码"
+        Attribute:
+          MiddleScale: "1.0"
+          CursorColor: "151,255,255"
+          PasswordChar: "*"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          SuggestionColor: "151,255,255"
+          textColor: "255,255,255"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          EmptyText: "请输入你的密码..."
+          Length: "32"
+          X: "848.59"
+          Alpha: "1.0"
+          Y: "397.65"
+          Height: "17.41"
+          Width: "126.93"
+          UneditableTextColor: "190,190,190"
+          Focused: "true"
+      提示文本:
+        Texts:
+          - "&c如果你是第一次玩本服 说明用户名已经被占用了 请更换用户名"
+        Lock: true
+        Type: "Text"
+        Actions:
+        SubAttribute:
+          font:
+            Attribute:
+              fontSize: "18.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "0.5"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "851.59"
+          Alpha: "1.0"
+          Y: "422.33"
+          Limit: "-1"
+      登录游戏按钮:
+        Texts:
+          - "&e&l[ &a&n登陆游戏&e&l ]"
+        Lock: true
+        Type: "Image"
+        Actions:
+          ReleaseLeft: "通讯.发送('DreamAuthMe',List['login',main.密码框.Content])"
+        SubAttribute:
+          hover:
+            Attribute:
+              path: "[location]DreamAuthMe/short2.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/short1.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "0"
+              fontSize: "10.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "870.19"
+          Alpha: "1.0"
+          Y: "432.84"
+          Height: "10.7"
+          Width: "38.6"
+      密码修改按钮:
+        Texts:
+          - "&e&l[ &6&n密码修改&e&l ]"
+        Lock: true
+        Type: "Image"
+        Actions:
+          ReleaseLeft: "界面.打开界面('DreamAuthMeChangePsd');"
+        SubAttribute:
+          hover:
+            Attribute:
+              path: "[location]DreamAuthMe/short2.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/short1.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "0"
+              fontSize: "10.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "913.69"
+          Alpha: "1.0"
+          Y: "432.84"
+          Height: "10.7"
+          Width: "38.6"
+      离开游戏按钮:
+        Texts:
+          - "&e&l[ &4离开游戏&e&l ]"
+        Lock: true
+        Type: "Image"
+        Actions:
+          Release: "游戏.退出();"
+        SubAttribute:
+          hover:
+            Attribute:
+              path: "[location]DreamAuthMe/long2.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/long1.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "0"
+              fontSize: "10.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "870.19"
+          Alpha: "1.0"
+          Y: "446.99"
+          Height: "10.69"
+          Width: "81.71"
+      弹窗:
+        Texts: [ ]
+        Lock: false
+        Type: "Image"
+        Actions:
+        SubAttribute:
+          hover:
+            Attribute:
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          normal:
+            Attribute:
+              path: "[location]DreamAuthMe/tc.png"
+              OffsetX: "0.0"
+              Alpha: "1.0"
+              OffsetY: "0.0"
+          font:
+            Attribute:
+              mode: "1"
+              fontSize: "10.0"
+              LineSpace: "1"
+              font: "none"
+        Tips: [ ]
+        Attribute:
+          MiddleScale: "1.0"
+          MinDragY: "0.0"
+          MinDragX: "0.0"
+          RotateZ: "0.0"
+          OffsetX: "0.0"
+          Scale: "1.0"
+          OffsetY: "0.0"
+          Point: "0"
+          MaxDragX: "0.0"
+          MaxDragY: "0.0"
+          X: "877.56"
+          Alpha: "1.0"
+          Visible: "false"
+          Y: "413.8"
+          Height: "17.3"
+          Width: "70.6"

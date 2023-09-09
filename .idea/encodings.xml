@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/DreamAuthMe.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/event/PlayerAuthMeEvent.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/event/handleCustomPacketEvent.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/manager/DataManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/manager/command.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/method.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/tools/CheckPluginUpdate.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/tools/Lang.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ltd/dreamcraft/dreamauthme/tools/Metrics.java" charset="GBK" />
+  </component>
+</project>

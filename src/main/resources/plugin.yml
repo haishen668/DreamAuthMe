@@ -1,0 +1,12 @@
+name: DreamAuthMe
+version: '${version}'
+main: ltd.dreamcraft.dreamauthme.DreamAuthMe
+author: haishen668
+api-version: '1.18'
+depend:
+  - "DreamPainter"
+  - "AuthMe"
+commands:
+  DreamAuthMe:
+    aliases:
+      - "da"
